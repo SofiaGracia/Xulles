@@ -1,0 +1,34 @@
+GREP: grep <tal>  ---->  Filtra files que continguen tal
+grep -i <tal> ----> Filtra tal sense sensibilitat a minus i mayus
+grep ^<tal> ----> Filtra les FILES que COMENCEN per tal (Fichers regulars: ^-)
+grep <tal>$ ----> Filtra les FILES que ACABEN per tal
+grep -w <tal> ----> Indicar que el patró fa referència a una paraula exacta
+-------------
+CUT: Filtra columnes
+Exemple: ls -l| cut -f2 -d" "
+-------------
+TR
+tr -d "a" ----> Del caràcter a
+tr -d -c "a" ----> Del tot el que no siga el caràcter a
+tr -dc "a"
+tr -s " " ----> Del caràcter DUPLICAT
+-------------
+SORT: sort -n ----> - a + 
+sort -nr ----> + a -
+sort ---->  Alf
+sort -r ----> Alf revés
+Sense tindre que filtrar avans el camp:
+sort -nrk5 (+ a - el camp 5)
+-------------
+HEAD: Mostra 1es 10 l
+head -n(1a lin)+3(fins a la 3a) -> head -n+3
+head -n-3 (desde la 1a fins a la última -3(antepenúltima))
+-------------
+TAIL: ls -l|tail ----> Dona últms 10 l
+ls -l|tail -n-3 ----> Dona últms 3 l
+ls -l|tail -n+3 ----> Dona a partir de la 3 l fins ult
+-------------
+WC: Conta linies, paraules, caracters, bytes, etc...
+ls -l|wc -l ----> Conta linies
+wc -m ----> Cta caràcters
+wc -w ----> Cta paraules
